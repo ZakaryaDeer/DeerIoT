@@ -262,7 +262,7 @@ export const applyTbNamespaceToSvgContent = (svgContent: string): string => {
   tbNamespaceRegex.lastIndex = 0;
   match = tbNamespaceRegex.exec(svgRootNode);
   if (match === null || !match.length) {
-    svgRootNode = svgRootNode.slice(0, -1) + ' xmlns:tb="https://thingsboard.io/svg">';
+    svgRootNode = svgRootNode.slice(0, -1) + ' xmlns:tb="  svg">';
     return `${svgRootNode}\n${innerSvg}\n</svg>`;
   }
   return svgContent;
